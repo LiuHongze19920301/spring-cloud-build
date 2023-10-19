@@ -2,22 +2,27 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xmlns="http://maven.apache.org/POM/4.0.0"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>org.springframework.cloud</groupId>
 	<artifactId>spring-cloud-build</artifactId>
 	<version>4.1.0-M2</version>
+
 	<packaging>pom</packaging>
+
 	<name>Spring Cloud Parent</name>
-	<description>Spring Cloud parent pom, managing plugins and dependencies for Spring
-		Cloud projects
-	</description>
+	<description>Spring Cloud parent pom, managing plugins and dependencies for Spring Cloud projects</description>
+
 	<modules>
 		<module>docs</module>
 		<module>spring-cloud-build-dependencies</module>
 		<module>spring-cloud-dependencies-parent</module>
 		<module>spring-cloud-build-tools</module>
 	</modules>
+
 	<url>https://spring.io/spring-cloud</url>
+
 	<properties>
 		<java.version>17</java.version>
 		<!-- delimiter that doesn't clash with Spring ${} placeholders -->
@@ -106,8 +111,10 @@
 		<maven-dependency-plugin-for-docs.phase>generate-resources</maven-dependency-plugin-for-docs.phase>
 		<maven-dependency-plugin-for-docs-classes.phase>generate-resources</maven-dependency-plugin-for-docs-classes.phase>
 		<maven-dependency-plugin-for-guides.phase>generate-resources</maven-dependency-plugin-for-guides.phase>
-		<generated-docs-multipage-output.dir>${project.build.directory}/generated-docs/reference/html</generated-docs-multipage-output.dir>
-		<generated-docs-singlepage-output.dir>${project.build.directory}/generated-docs/reference/htmlsingle</generated-docs-singlepage-output.dir>
+		<generated-docs-multipage-output.dir>${project.build.directory}/generated-docs/reference/html
+		</generated-docs-multipage-output.dir>
+		<generated-docs-singlepage-output.dir>${project.build.directory}/generated-docs/reference/htmlsingle
+		</generated-docs-singlepage-output.dir>
 		<generated-docs-pdf-output.dir>${project.build.directory}/generated-docs/reference/pdf</generated-docs-pdf-output.dir>
 		<javadoc.failOnError>false</javadoc.failOnError>
 		<javadoc.failOnWarnings>false</javadoc.failOnWarnings>
@@ -118,8 +125,10 @@
 		<sonar-jacoco-listeners.version>5.14.0.18788</sonar-jacoco-listeners.version>
 		<duplicate-finder-maven-plugin.version>1.5.1</duplicate-finder-maven-plugin.version>
 		<duplicate-finder-maven-plugin.printEqualFiles>false</duplicate-finder-maven-plugin.printEqualFiles>
-		<duplicate-finder-maven-plugin.failBuildInCaseOfDifferentContentConflict>false</duplicate-finder-maven-plugin.failBuildInCaseOfDifferentContentConflict>
-		<duplicate-finder-maven-plugin.failBuildInCaseOfEqualContentConflict>false</duplicate-finder-maven-plugin.failBuildInCaseOfEqualContentConflict>
+		<duplicate-finder-maven-plugin.failBuildInCaseOfDifferentContentConflict>false
+		</duplicate-finder-maven-plugin.failBuildInCaseOfDifferentContentConflict>
+		<duplicate-finder-maven-plugin.failBuildInCaseOfEqualContentConflict>false
+		</duplicate-finder-maven-plugin.failBuildInCaseOfEqualContentConflict>
 		<duplicate-finder-maven-plugin.failBuildInCaseOfConflict>true</duplicate-finder-maven-plugin.failBuildInCaseOfConflict>
 		<duplicate-finder-maven-plugin.checkCompileClasspath>true</duplicate-finder-maven-plugin.checkCompileClasspath>
 		<duplicate-finder-maven-plugin.checkRuntimeClasspath>true</duplicate-finder-maven-plugin.checkRuntimeClasspath>
@@ -129,10 +138,13 @@
 		<duplicate-finder-maven-plugin.preferLocal>true</duplicate-finder-maven-plugin.preferLocal>
 		<duplicate-finder-maven-plugin.useResultFile>true</duplicate-finder-maven-plugin.useResultFile>
 		<duplicate-finder-maven-plugin.resultFileMinClasspathCount>2</duplicate-finder-maven-plugin.resultFileMinClasspathCount>
-		<duplicate-finder-maven-plugin.resultFile>${project.build.directory}/duplicate-finder-result.xml</duplicate-finder-maven-plugin.resultFile>
+		<duplicate-finder-maven-plugin.resultFile>${project.build.directory}/duplicate-finder-result.xml
+		</duplicate-finder-maven-plugin.resultFile>
 		<duplicate-finder-maven-plugin.includeBootClasspath>false</duplicate-finder-maven-plugin.includeBootClasspath>
-		<duplicate-finder-maven-plugin.bootClasspathProperty>sun.boot.class.path</duplicate-finder-maven-plugin.bootClasspathProperty>
-		<duplicate-finder-maven-plugin.useDefaultResourceIgnoreList>true</duplicate-finder-maven-plugin.useDefaultResourceIgnoreList>
+		<duplicate-finder-maven-plugin.bootClasspathProperty>sun.boot.class.path
+		</duplicate-finder-maven-plugin.bootClasspathProperty>
+		<duplicate-finder-maven-plugin.useDefaultResourceIgnoreList>true
+		</duplicate-finder-maven-plugin.useDefaultResourceIgnoreList>
 		<duplicate-finder-maven-plugin.includePomProjects>false</duplicate-finder-maven-plugin.includePomProjects>
 		<maven-gpg-plugin.phase>verify</maven-gpg-plugin.phase>
 		<generate-docs.phase>prepare-package</generate-docs.phase>
@@ -143,6 +155,7 @@
 		<generate-readme.phase>prepare-package</generate-readme.phase>
 		<generate-cloud-resources.phase>generate-resources</generate-cloud-resources.phase>
 	</properties>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -154,10 +167,13 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 	<organization>
 		<name>Pivotal Software, Inc.</name>
 		<url>https://www.spring.io</url>
 	</organization>
+
+	<!-- licenses -->
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -181,15 +197,17 @@
 			</comments>
 		</license>
 	</licenses>
+
+	<!-- scm -->
 	<scm>
 		<url>https://github.com/spring-cloud/spring-cloud-build</url>
-		<connection>scm:git:git://github.com/spring-cloud/spring-cloud-build.git
-		</connection>
+		<connection>scm:git:git://github.com/spring-cloud/spring-cloud-build.git</connection>
 		<developerConnection>
 			scm:git:ssh://git@github.com/spring-cloud/spring-cloud-build.git
 		</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
 	<developers>
 		<developer>
 			<id>dsyer</id>
@@ -242,6 +260,7 @@
 			</roles>
 		</developer>
 	</developers>
+
 	<build>
 		<!-- Turn on filtering by default for application properties -->
 		<resources>
@@ -261,6 +280,7 @@
 				</excludes>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -292,9 +312,44 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-toolchains-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>toolchain</goal>
+						</goals>
+						<configuration>
+							<toolchains>
+								<jdk>
+									<version>${java.version}</version>
+								</jdk>
+							</toolchains>
+						</configuration>
+					</execution>
+					<execution>
+						<id>test</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>toolchain</goal>
+						</goals>
+						<configuration>
+							<toolchains>
+								<jdk>
+									<version>${java.version}</version>
+								</jdk>
+							</toolchains>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
+
+				<!-- flatten -->
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>flatten-maven-plugin</artifactId>
@@ -320,12 +375,15 @@
 						</execution>
 					</executions>
 				</plugin>
+
 				<!-- Apply more sensible defaults for user projects -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-eclipse-plugin</artifactId>
 					<version>${maven-eclipse-plugin.version}</version>
 				</plugin>
+
+				<!-- compiler -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -336,6 +394,7 @@
 						<compilerArgument>-parameters</compilerArgument>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
@@ -349,6 +408,7 @@
 						</execution>
 					</executions>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
@@ -363,11 +423,13 @@
 						</archive>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>${maven-antrun-plugin.version}</version>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -383,6 +445,7 @@
 						<argLine>--add-opens=java.base/java.net=ALL-UNNAMED</argLine>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
@@ -398,6 +461,7 @@
 						</archive>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
@@ -406,6 +470,7 @@
 						<mainClass>${start-class}</mainClass>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
@@ -417,6 +482,7 @@
 						<useDefaultDelimiters>false</useDefaultDelimiters>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>io.spring.javaformat</groupId>
 					<artifactId>spring-javaformat-maven-plugin</artifactId>
@@ -434,6 +500,7 @@
 						</execution>
 					</executions>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
@@ -505,6 +572,7 @@
 						</execution>
 					</executions>
 				</plugin>
+
 				<plugin>
 					<groupId>pl.project13.maven</groupId>
 					<artifactId>git-commit-id-plugin</artifactId>
@@ -527,6 +595,7 @@
 						<useNativeGit>true</useNativeGit>
 					</configuration>
 				</plugin>
+
 				<!-- Support our own plugin -->
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
@@ -543,6 +612,7 @@
 						<mainClass>${start-class}</mainClass>
 					</configuration>
 				</plugin>
+
 				<!-- Support shade packaging (if the user does not want to use our plugin) -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -601,6 +671,7 @@
 						</execution>
 					</executions>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
@@ -620,6 +691,7 @@
 						</rules>
 					</configuration>
 				</plugin>
+
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -651,6 +723,7 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
@@ -665,6 +738,7 @@
 						</execution>
 					</executions>
 				</plugin>
+
 				<plugin>
 					<groupId>org.basepom.maven</groupId>
 					<artifactId>duplicate-finder-maven-plugin</artifactId>
@@ -679,29 +753,36 @@
 						</execution>
 					</executions>
 					<configuration>
-					<printEqualFiles>${duplicate-finder-maven-plugin.printEqualFiles}</printEqualFiles>
-					<failBuildInCaseOfDifferentContentConflict>${duplicate-finder-maven-plugin.failBuildInCaseOfDifferentContentConflict}</failBuildInCaseOfDifferentContentConflict>
-					<failBuildInCaseOfEqualContentConflict>${duplicate-finder-maven-plugin.failBuildInCaseOfEqualContentConflict}</failBuildInCaseOfEqualContentConflict>
-					<failBuildInCaseOfConflict>${duplicate-finder-maven-plugin.failBuildInCaseOfConflict}</failBuildInCaseOfConflict>
-					<checkCompileClasspath>${duplicate-finder-maven-plugin.checkCompileClasspath}</checkCompileClasspath>
-					<checkRuntimeClasspath>${duplicate-finder-maven-plugin.checkRuntimeClasspath}</checkRuntimeClasspath>
-					<checkTestClasspath>${duplicate-finder-maven-plugin.checkTestClasspath}</checkTestClasspath>
-					<skip>${duplicate-finder-maven-plugin.skip}</skip>
-					<quiet>${duplicate-finder-maven-plugin.quiet}</quiet>
-					<preferLocal>${duplicate-finder-maven-plugin.preferLocal}</preferLocal>
-					<useResultFile>${duplicate-finder-maven-plugin.useResultFile}</useResultFile>
-					<resultFileMinClasspathCount>${duplicate-finder-maven-plugin.resultFileMinClasspathCount}</resultFileMinClasspathCount>
-					<resultFile>${duplicate-finder-maven-plugin.resultFile}</resultFile>
-					<includeBootClasspath>${duplicate-finder-maven-plugin.includeBootClasspath}</includeBootClasspath>
-					<bootClasspathProperty>${duplicate-finder-maven-plugin.bootClasspathProperty}</bootClasspathProperty>
-					<useDefaultResourceIgnoreList>${duplicate-finder-maven-plugin.useDefaultResourceIgnoreList}</useDefaultResourceIgnoreList>
-					<includePomProjects>${duplicate-finder-maven-plugin.includePomProjects}</includePomProjects>
+						<printEqualFiles>${duplicate-finder-maven-plugin.printEqualFiles}</printEqualFiles>
+						<failBuildInCaseOfDifferentContentConflict>
+							${duplicate-finder-maven-plugin.failBuildInCaseOfDifferentContentConflict}
+						</failBuildInCaseOfDifferentContentConflict>
+						<failBuildInCaseOfEqualContentConflict>
+							${duplicate-finder-maven-plugin.failBuildInCaseOfEqualContentConflict}
+						</failBuildInCaseOfEqualContentConflict>
+						<failBuildInCaseOfConflict>${duplicate-finder-maven-plugin.failBuildInCaseOfConflict}
+						</failBuildInCaseOfConflict>
+						<checkCompileClasspath>${duplicate-finder-maven-plugin.checkCompileClasspath}</checkCompileClasspath>
+						<checkRuntimeClasspath>${duplicate-finder-maven-plugin.checkRuntimeClasspath}</checkRuntimeClasspath>
+						<checkTestClasspath>${duplicate-finder-maven-plugin.checkTestClasspath}</checkTestClasspath>
+						<skip>${duplicate-finder-maven-plugin.skip}</skip>
+						<quiet>${duplicate-finder-maven-plugin.quiet}</quiet>
+						<preferLocal>${duplicate-finder-maven-plugin.preferLocal}</preferLocal>
+						<useResultFile>${duplicate-finder-maven-plugin.useResultFile}</useResultFile>
+						<resultFileMinClasspathCount>${duplicate-finder-maven-plugin.resultFileMinClasspathCount}
+						</resultFileMinClasspathCount>
+						<resultFile>${duplicate-finder-maven-plugin.resultFile}</resultFile>
+						<includeBootClasspath>${duplicate-finder-maven-plugin.includeBootClasspath}</includeBootClasspath>
+						<bootClasspathProperty>${duplicate-finder-maven-plugin.bootClasspathProperty}</bootClasspathProperty>
+						<useDefaultResourceIgnoreList>${duplicate-finder-maven-plugin.useDefaultResourceIgnoreList}
+						</useDefaultResourceIgnoreList>
+						<includePomProjects>${duplicate-finder-maven-plugin.includePomProjects}</includePomProjects>
 					</configuration>
 				</plugin>
-
 			</plugins>
 		</pluginManagement>
 	</build>
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -739,6 +820,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
+
 	<distributionManagement>
 		<downloadUrl>https://github.com/spring-cloud</downloadUrl>
 		<site>
@@ -758,6 +840,7 @@
 			<url>https://repo.spring.io/libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
+
 	<profiles>
 		<profile>
 			<id>spring</id>
@@ -820,6 +903,7 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
+
 		<profile>
 			<id>milestone</id>
 			<distributionManagement>
@@ -830,6 +914,7 @@
 				</repository>
 			</distributionManagement>
 		</profile>
+
 		<profile>
 			<id>central</id>
 			<build>
@@ -851,6 +936,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>guides</id>
 			<build>
@@ -910,6 +996,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>java8</id>
 			<activation>
@@ -926,6 +1013,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>java11</id>
 			<activation>
@@ -993,6 +1081,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>docs</id>
 			<build>
@@ -1289,6 +1378,7 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
+
 		<profile>
 			<id>sonar</id>
 			<activation>
@@ -1378,7 +1468,9 @@
 							<!-- generate line coverage -->
 							<exportLineCoverage>true</exportLineCoverage>
 							<!-- in the "right" format -->
-							<outputFormats><value>XML</value></outputFormats>
+							<outputFormats>
+								<value>XML</value>
+							</outputFormats>
 							<!-- and write reports where report-aggregate-module expects to find it -->
 							<timestampedReports>false</timestampedReports>
 							<!-- There are modules that don't have tests -->
